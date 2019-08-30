@@ -1,0 +1,212 @@
+:root {
+    /* BODY */
+    --clr_body: #222222;
+    --clr_bodyFont: #FFFFFF;
+
+    /* NAVBAR */
+    --clr_navbar: teal;
+    --mrgn_navbar: 10px;
+
+    /* FOOTER */
+    --clr_footer: #555555;
+}
+
+body {
+    background: var(--clr_body, #222222);
+    color: var(--clr_bodyFont, #FFFFFF);
+}
+
+.plain-resp-link-list {
+    list-style-type: none;
+    text-align: center;
+    padding-right: 20px;
+}
+.plain-resp-link-list li a {
+    text-decoration: none;
+    font-size: 1.1em;
+    color: var(--clr_bodyFont, #FFFFFF);      
+}
+
+.center-spacearound-vert-flexdiv {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.yellow-button {
+    display: block;
+    background-color: yellow;
+    border-style: none;
+    padding: 5px 5px 5px 10px;
+    margin:10px;
+    font-size: 1.1em;
+}
+
+/************************************************************
+*************************************************************
+                        NAVBAR
+*************************************************************
+************************************************************/
+#nav-div {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    background-color: var(--clr_navbar, teal);
+}
+
+.nav-div-comp {
+    margin: var(--mrgn_navbar, 10px);
+}
+
+#logo-img {
+    height: auto;
+    max-width: 100%;
+    display: block;
+}
+
+#nav-div-subdiv {
+    display: flex; 
+    justify-content: space-between;   
+    align-items: center;    
+}
+
+@media (max-width: 500px) {
+    #nav-div-subdiv {
+        flex-direction: column;        
+    }
+}
+
+@media (min-width: 501px) {
+    #nav-div-subdiv {
+        flex-direction: row;
+        
+    }
+}
+
+@media (min-width: 651px) {
+    #nav-link-list li {
+        display: inline;
+        padding: 25px 25px 0 0;
+    }
+}
+
+/************************************************************
+*************************************************************
+                        MAIN
+*************************************************************
+************************************************************/
+#main-div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#txtEmail {
+    width: 20em;
+    height: 2em;
+    margin-top: 5px;
+}
+
+#btnEmail {
+    font-weight: 900;
+}
+
+#main-div-content-descr {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: repeat(3, 80px);
+    grid-gap: 40px;
+    margin: 50px 0 50px 0;
+}
+    
+.content-descr-icon {
+    padding-top: 10px;
+}
+
+#main-div-content-descr div h2 {
+    line-height: 0;
+}
+
+@media (max-width: 500px) {
+    #main-div {
+        margin-top: 200px;
+    }
+}
+@media (min-width: 501px) {
+    #main-div {
+        margin-top: 200px;
+    }
+}
+@media (min-width: 651px) {
+    #main-div {
+        margin-top: 100px;
+    }
+}
+
+@media (max-width: 600px) {
+    #main-div-content-descr {
+        display: grid;
+        grid-template-columns: auto;
+        text-align: center;
+    }
+
+    .content-descr-icon {
+        display: none;
+        visibility: hidden;
+    }    
+}
+
+
+/************************************************************
+*************************************************************
+                        CARDS
+*************************************************************
+************************************************************/
+.card {
+    border-style: solid;
+}
+
+.card-title {
+    background-color: var(--clr_footer, #555555);
+    padding: 5px;
+}
+
+.card-title h3 {
+    text-align: center;
+}
+
+#main-div-cards {
+    width: 90vw;
+    padding: 40px;
+    resize: both;
+    overflow: auto;    
+}
+
+@media (min-width: 601px) {
+    #main-div-cards {
+        display: grid;
+        grid-template-columns: auto auto auto;
+        grid-gap: 10px;
+    }
+}
+
+
+
+/************************************************************
+*************************************************************
+                        FOOTER
+*************************************************************
+************************************************************/
+
+#footer-div {
+    background-color: var(--clr_footer, #DDDDDD);
+    display: flex;
+    justify-content: flex-end;
+}
+
+#footer-link-list li {
+    display: inline;
+    padding: 25px 25px 0 0;
+}
